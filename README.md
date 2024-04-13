@@ -16,4 +16,4 @@ pip install -r requirements.txt
 
 pytest
 
-Внутри папки avito_task появится папка output, в ней будут скриншоты счетчиков.
+## Внутри папки avito_task появится папка output, в ней будут скриншоты счетчиков.
