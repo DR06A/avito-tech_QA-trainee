@@ -1,12 +1,14 @@
 import os
-from playwright.sync_api import sync_playwright
-import pytest
 
-if not os.path.exists("output"):
-    os.makedirs("output")
+
+os.makedirs("output", exist_ok=True)
+
 
 def test_1_x_1(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="0.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="0.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -21,8 +23,12 @@ def test_1_x_1(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_1_x_2(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="999.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="999.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -37,8 +43,12 @@ def test_1_x_2(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_2_x_1(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="1000.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="1000.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -53,8 +63,12 @@ def test_2_x_1(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_2_x_2(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="999999.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="999999.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -69,8 +83,12 @@ def test_2_x_2(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_3_x_1(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="1000000.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="1000000.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -85,8 +103,12 @@ def test_3_x_1(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_3_x_2(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="999999999.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="999999999.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -101,8 +123,12 @@ def test_3_x_2(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_4_x_1(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="1000000000.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="1000000000.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -117,8 +143,12 @@ def test_4_x_1(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_4_x_2(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="999999999999.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="999999999999.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -133,8 +163,12 @@ def test_4_x_2(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_5_x_1(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="1000000000000.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="1000000000000.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -149,8 +183,12 @@ def test_5_x_1(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_5_x_2(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="999999999999999.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="999999999999999.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -165,8 +203,12 @@ def test_5_x_2(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_6_x(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="1000000000000000.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="1000000000000000.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
@@ -181,8 +223,12 @@ def test_6_x(page):
     counter_2.screenshot(path=screenshot_path_2)
     counter_3.screenshot(path=screenshot_path_3)
 
+
 def test_7_x(page):
-    page.route("**/web/1/charity/ecoImpact/init", lambda route: route.fulfill(path="fractional.json"))
+    page.route(
+        "**/web/1/charity/ecoImpact/init",
+        lambda route: route.fulfill(path="fractional.json"),
+    )
     page.goto("https://www.avito.ru/avito-care/eco-impact")
 
     counter_1 = page.locator(".desktop-impact-item-eeQO3").nth(1)
