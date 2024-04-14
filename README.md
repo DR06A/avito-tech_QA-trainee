@@ -10,9 +10,9 @@ python -m venv venv
 
 venv\Scripts\activate
 
-playwright install
-
 pip install -r requirements.txt
+
+playwright install
 
 pytest
 
